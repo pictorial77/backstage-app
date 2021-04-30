@@ -61,6 +61,7 @@ catalog:
     # Backstage example components
     - type: url
       target: https://github.com/pictorial77/backstage-app/blob/develop/catalog-info.yaml
+      
 
     # Backstage example templates
     - type: url
