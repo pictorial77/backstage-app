@@ -59,8 +59,8 @@ catalog:
     - allow: [Component, System, API, Group, User, Template, Location]
   locations:
     # Backstage example components
-    - type: url
-      target: https://github.com/pictorial77/backstage-app/blob/develop/catalog-info.yaml
+    - type: file
+      target: ../catalog-model/ustore-cert-service.yaml
       
 
     # Backstage example templates
@@ -84,3 +84,15 @@ catalog:
       target: https://github.com/backstage/backstage/blob/master/plugins/scaffolder-backend/sample-templates/docs-template/template.yaml
       rules:
         - allow: [Template]
+
+kubernetes:
+  serviceLocatorMethod:
+    type: 'multiTenant'
+  clusterLocatorMethods:
+    - type: config
+      clusters:
+        - url: https://localhost:6443
+          name: docker-desktop
+          authProvider: serviceAccount
+          serviceAccountToken: ${K8S_TOKEN}
+          skipTLSVerify: true

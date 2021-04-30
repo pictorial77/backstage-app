@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ustore-cert-service
+  description: cert-based auth service
+  tags:
+    - go
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app=kubia'
+spec:
+  type: service
+  lifecycle: production
+  owner: service-team
