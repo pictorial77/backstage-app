@@ -22,3 +22,4 @@ metadata:
 spec:
   type: service
   lifecycle: production
+  owner: service-team
