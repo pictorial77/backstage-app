@@ -11,3 +11,14 @@ spec:
   type: website
   owner: john@example.com
   lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ustore-cert-service
+  description: cert-based auth service
+  tags:
+    - go
+spec:
+  type: service
+  lifecycle: production
